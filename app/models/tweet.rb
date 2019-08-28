@@ -1,4 +1,4 @@
-class Tweet < ActiveRecord::Base 
-  attr_accessor :content 
-  belongs_to :user 
+class Tweet < ActiveRecord::Base
+  validates :content, presence: true, allow_blank: false
+  belongs_to :user
 end
